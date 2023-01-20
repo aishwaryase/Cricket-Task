@@ -216,7 +216,6 @@ const category = async function (req, res) {
             message: "category created successfully",
             data: obj
         })
-
     }
     catch (error) {
         return res.status(500).send({
@@ -314,6 +313,7 @@ const createRoutine = async function (req, res) {
         })
     }
 };
+
 //=======================================================
 
 const getRoutine = async function (req, res) {
@@ -339,7 +339,7 @@ const getMyDrills = async function (req, res) {
     try {
         let body = req.body;
 
-        const drills = await myDrillModel.find(body).select({_id:1, title: 1, category: 1, repetation: 1, sets: 1, createdAt:1 });
+        const drills = await myDrillModel.find(body).select({ _id: 1, title: 1, category: 1, repetation: 1, sets: 1, createdAt: 1 });
 
         return res.status(200).send({
             status: true,
