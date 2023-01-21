@@ -21,10 +21,10 @@ const OnGoingDrillSchema = new mongoose.Schema({
         type: String,
         require: true
     }],
-    recommendation: {
-        type: String,
-        require: true
-    },
+    // recommendation: {
+    //     type: String,
+    //     require: true
+    // },
     remarks: {
         type: String,
         require: true

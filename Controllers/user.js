@@ -300,7 +300,7 @@ const createRoutine = async function (req, res) {
             return res.status(400).send({ status: false, message: "You already have a routine set for this time" })
 
         const routinesCreated = await routineModel.create(data);
-
+        
         return res.status(201).send({
             message: "Success",
             data: routinesCreated
